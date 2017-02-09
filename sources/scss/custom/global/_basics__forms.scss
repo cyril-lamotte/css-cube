@@ -1,0 +1,43 @@
+/* =============================================================================
+   Forms
+
+   Reusable classes & mixins for forms.
+============================================================================= */
+
+// Apply default formating to a form.
+//
+// form {
+//   @include form;
+// }
+@mixin form {
+
+  label {
+    @extend .label--block;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    @extend .input--text;
+  }
+
+  .form__item {
+    @extend .form-row;
+  }
+
+  .form__submit {
+    @extend .btn;
+  }
+
+  input[type="radio"] {
+    @extend .input--radio;
+  }
+
+  input[type="checkbox"] {
+    @extend .input--checkbox;
+  }
+
+  select {
+    @extend .input--select;
+  }
+
+}
