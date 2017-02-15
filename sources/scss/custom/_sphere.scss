@@ -1,0 +1,49 @@
+/* =============================================================================
+   Sphere
+============================================================================= */
+
+.sphere {
+  position: relative;
+  width: 200px;
+  height: 200px;
+
+  transform-style: preserve-3d;
+  animation-name: sphere-rotation;
+  animation-duration: 8s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.sphere__ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #f00;
+  border-radius: 50%;
+
+  &:nth-child(2) {
+    transform: rotateY(90deg);
+  }
+
+  &:nth-child(3) {
+    transform: rotateY(45deg);
+  }
+
+  &:nth-child(4) {
+    transform: rotateY(135deg);
+  }
+}
+
+
+
+@keyframes sphere-rotation {
+
+  to {
+    transform: rotateY(180deg) rotateZ(45deg);
+  }
+
+}
